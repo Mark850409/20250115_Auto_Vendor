@@ -19,6 +19,7 @@
   - `selenium_home.py`: 截取首頁截圖的腳本
   - `selenium_credit_card_list.py`: 截取信用卡列表截圖的腳本
   - `selenium_cards.py`: 截取停發卡片截圖的腳本
+  - `config.py`: 存放 Selenium 測試的配置文件
 - `requirements.txt`: 專案所需的 Python 套件
 - `README.md`: 專案說明文件
 
@@ -27,7 +28,19 @@
 - [專案簡介](#專案簡介)
   - [專案結構](#專案結構)
   - [目錄說明](#目錄說明)
+  - [專案重購部分](#專案重購部分)
   - [如何使用](#如何使用)
+
+
+## 專案重購部分
+
+> [!NOTE]
+> - 調整 `python_code` 讓使用者可以`動態輸入數值`進行`循環輸出`。
+> - 新增 `config.py` 文件以集中管理 Selenium 測試的配置。
+> - 調整 `selenium_code` 元素定位方式。
+> - 移除大量的`time.sleep()`，改用`WebDriverWait()`
+> - 改進`日誌記錄`功能，增加`錯誤處理`和詳細的`日誌輸出`。
+
 
 ## 如何使用
 
@@ -76,3 +89,4 @@
         ```sh
         python python_code/fix_scores.py
         ```
+

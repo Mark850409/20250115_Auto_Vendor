@@ -12,6 +12,28 @@ def last_person_standing(n):
     return people[0]  # 剩下的最後一人
 
 if __name__ == "__main__":
-    # 測試最後留下的同事順位
-    n = 10  # 假設有10個人
-    print("最後留下的同事是第", last_person_standing(n), "順位")
+    while True:
+        try:
+            # 讀取使用者輸入
+            user_input = input("請輸入團康活動的總人數 (輸入 'q' 結束程式): ")
+            
+            # 檢查是否要退出程式(不分大小寫)
+            if user_input.lower() == 'q':
+                print("程式結束")
+                break
+            
+            # 轉換輸入為整數並驗證
+            n = int(user_input)
+            if n <= 0:
+                print("請輸入大於0的正整數！")
+                continue
+                
+            # 計算並顯示結果
+            result = last_person_standing(n)
+            print(f"在{n}人中，最後留下的同事是第 {result} 順位")
+            # 加入分隔線進行輸出美化
+            print("-" * 50)
+            
+        except ValueError:
+            print("輸入無效！請輸入正整數。")
+            continue
